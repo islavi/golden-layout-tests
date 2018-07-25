@@ -1,0 +1,51 @@
+
+  h6 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  .vessel-info {
+    width: 300px;
+    border: #cccccc;
+    background-color: #000000;
+    opacity: 0.8;
+    color: #ffffff;
+    box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 10px;
+
+    .vessel-title {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      border-bottom: solid 1px #ffffff;
+      padding-bottom: 10px;
+      
+      .vessel-name {
+        font-size: 20px;
+      }
+  
+    }
+
+    .vessel-id {
+      margin-top: 20px;
+      font-size: 11px;
+    }
+
+    .info-row {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    il-image {
+      margin-top: 10px;
+    }
+
+  }

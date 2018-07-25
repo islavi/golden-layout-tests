@@ -2,7 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, Component } from '@angular/core';
 import { GoldenLayoutModule, GoldenLayoutService, GoldenLayoutConfiguration } from '@core/index';
+import { goldenLayoutConfig } from './configuration/layout.config';
 import * as $ from 'jquery';
+import { TestPanelComponent } from '@app/components/test-panel.component';
+import { VesselsMapsModule } from '@components/vessels-map/vessels-map.module';
+import { UsersModule } from '@components/users/users.module';
+import { ServicesModule } from '@app/services/services.module';
+import { UsersService } from '@app/services';
+import { HttpClient, HttpClientModule } from '../../node_modules/@angular/common/http';
 
 @Component({
   template: `<div class="spawn-new"></div><golden-layout-root></golden-layout-root>`,
@@ -17,62 +24,22 @@ export class RootComponent {
   }
 
 }
-@Component({
-  template: `<h1>Test</h1>`,
-  selector: `app-test`,
-})
-export class TestComponent {
-  constructor() { }
-
-}
-@Component({
-  template: `<h1>Test2</h1>`,
-  selector: `app-tested`,
-})
-export class TestedComponent {
-  constructor() { }
-
-}
-
-const config: GoldenLayoutConfiguration = {
-  components: [
-    {
-      component: TestComponent,
-      componentName: 'app-test'
-    },
-    {
-      component: TestedComponent,
-      componentName: 'app-tested',
-    },
-  ],
-  defaultLayout: {
-    content: [
-      {
-        type: 'row',
-        content: [
-          {
-            type: 'component',
-            componentName: 'app-test',
-            title: 'Test 1',
-          },
-          {
-            type: 'component',
-            componentName: 'app-test',
-            title: 'Test 2',
-          }
-        ]
-      }
-    ]
-  }
-};
 
 @NgModule({
-  declarations: [RootComponent, TestComponent, TestedComponent],
-  entryComponents: [TestComponent, TestedComponent],
+  declarations: [
+    RootComponent,
+    TestPanelComponent
+  ],
+  entryComponents: [
+    TestPanelComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    GoldenLayoutModule.forRoot(config),
+    VesselsMapsModule,
+    ServicesModule.forRoot(),
+    UsersModule,
+    GoldenLayoutModule.forRoot(goldenLayoutConfig),
   ],
   providers: [],
   bootstrap: [RootComponent]

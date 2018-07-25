@@ -1,0 +1,60 @@
+<div class="contact-card-wrapper">
+    <div class="contact-card__buttons">
+        <div class="contact-card__buttons__close" title="Close this card">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="contact-card__buttons__edit" title="Edit this contact">
+            <i class="fa fa-pencil"></i>
+        </div>
+        <div class="contact-card__buttons__remove" title="Delete this contact">
+            <i class="fa fa-user-times"></i>
+        </div>
+    </div>
+
+    <div class="contact-card__header">
+        <div class="contact-card__header__avt">
+            <img src="assets/images/nick.png" alt="" />
+        </div>
+        <div class="contact-card__header__name">
+            {{user.firstName}} {{user.lastName}}
+        </div>
+        <div class="contact-card__header__tags">
+            <span class="contact-card__header__tag-family">{{user.role}}</span>
+        </div>
+    </div>
+
+    <div class="contact-card__body">
+        <div class="contact-card__details">
+            <div>
+                <div class="contact-card__details__info">
+                    <span>{{user.phone}}</span>
+                </div>
+                <div class="contact-card__details__icon">
+                    <div>
+                        <i class="fa fa-phone"></i>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="contact-card__details__info">
+                    <span>{{user.role}}</span>
+                </div>
+                <div class="contact-card__details__icon">
+                    <div>
+                        <i class="fa fa-id-card"></i>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="contact-card__details__info">
+                    <a href="mailto:{{user.email}}">{{user.email}}</a>
+                </div>
+                <div class="contact-card__details__icon">
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

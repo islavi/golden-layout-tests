@@ -1,0 +1,28 @@
+<div class="draggable-area" appMovableArea>
+    <agm-map
+        [latitude]="mapLat" 
+        [longitude]="mapLng"
+        [disableDefaultUI]="false"
+        [zoomControl]="true"
+        [zoom]="zoom"
+        (mapClick)="mapClicked($event)"
+        >
+        <agm-marker 
+            *ngFor="let v of vessels; let i = index"
+            [latitude]="v.last_known_position.geometry.coordinates[1]"
+            [longitude]="v.last_known_position.geometry.coordinates[0]"
+            [iconUrl]="v.ship_type|vesselIcon: v.individual_classification"
+            (markerClick)="showVesselInfo(v.call_sign, v.id)"
+            (mouseOver)="showInfoWindow(v.id, infoWindow)"
+            (mouseOut)="hideInfoWindow(v.id, infoWindow)"
+            >
+            <agm-info-window #infoWindow>
+                <strong>{{ v.call_sign }}</strong>
+            </agm-info-window>
+        </agm-marker>
+    </agm-map>
+
+    <div class="draggable-component" appMovable>
+        <vessel-info></vessel-info>
+    </div>
+</div>

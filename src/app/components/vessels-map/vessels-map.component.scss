@@ -1,0 +1,41 @@
+
+  /deep/ agm-map {
+    width: 100%;
+    height: 100%;
+    // height: nb-theme(card-height-large);
+    position: absolute;
+    
+    agm-marker {
+
+      agm-info-window {
+        // transition: all 0.5s ease;
+      }
+    }
+  }
+
+  // Support draggable components
+  .draggable-component {
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    right: 20px;
+  
+    &.dragging {
+      border: dashed 1px #cccccc;
+      background: #000000;
+      opacity: 0.6;
+    }
+  }
+
+  .draggable {
+    cursor: move;
+    user-select: none;
+  }
+  
+  .draggable-area {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100%; // nb-theme(card-height-large);
+    // margin: -2.25rem -2.25rem -0.75rem; // Disable the column padding from parent.
+  }

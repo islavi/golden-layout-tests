@@ -1,0 +1,16 @@
+.create-user {
+    margin-bottom: 10px;
+    cursor: hand;
+}
+
+.users {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .contact-card {
+        width: 200px;
+        margin-right: 10px;
+    }
+
+}

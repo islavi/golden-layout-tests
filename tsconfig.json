@@ -18,7 +18,12 @@
     ],
     "paths": {
       "@app/*": ["src/app/*"],
-      "@core/*": ["core/*"]
+      "@core/*": ["core/*"],
+      "@components/*": ["src/app/components/*"],
+      "@services/*": ["src/app/services/*"],
+      "@models/*": ["src/app/models/*"],
+      "@ui/*": ["src/app/ui-components/*"],
+      "@pipes/*": ["src/app/pipes/*"]
     }
   }
 }

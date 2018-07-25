@@ -1,0 +1,6 @@
+<button (click)="createUser()" class="btn btn-info create-user">Create user</button>
+<div class="users">
+  <div class="contact-card" *ngFor="let user of users; last as isLast; odd as isOdd" [class.last-col]="isOdd">
+    <card [user]="user"></card>
+  </div>
+</div>

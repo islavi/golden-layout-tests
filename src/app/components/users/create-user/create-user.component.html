@@ -1,0 +1,28 @@
+
+<div class="input-group">
+    <input type="text" placeholder="Email" class="form-control" [(ngModel)]="user.email" />
+</div>
+<div class="input-group">
+    <input type="text" placeholder="First Name" class="form-control" [(ngModel)]="user.firstName" />
+</div>
+<div class="input-group">
+    <input type="text" placeholder="Last Name" class="form-control" [(ngModel)]="user.lastName" />
+</div>
+<div class="input-group">
+    <input type="password" placeholder="Password" class="form-control" [(ngModel)]="user.password" />
+</div>
+<div class="input-group">
+    <input type="number" placeholder="Age" class="form-control" [(ngModel)]="user.age" />
+</div>
+<div class="input-group">
+    <input type="number" placeholder="Phone" class="form-control" [(ngModel)]="user.phone" />
+</div>
+<div class="form-group">
+    <label>Select role</label>
+    <select class="form-control" [(ngModel)]="user.role" placeholder="Role">
+        <option value="admin">Admin</option>
+        <option value="operator">Operator</option>
+        <option value="guest">Guest</option>
+    </select>
+</div>
+<button (click)="addUser()" class="btn btn-info add-user">Add user</button>

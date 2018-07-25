@@ -1,0 +1,30 @@
+<div *ngIf="vessel" class="vessel-info">
+
+    <div class="vessel-title">
+        <div class="vessel-name">{{ vessel.name }}</div>
+        
+        <div class="vessel-flag">
+            <il-flag [country]="vessel.flag"></il-flag>
+            {{ vessel.flag }}
+        </div>
+    </div>
+
+    <div class="info-row">
+        <il-line key="Call sign" [value]="vessel.call_sign" keyTooltip="Vessel call sign"></il-line>
+        <il-line key="Position" value="{{vessel.last_known_position.geometry.coordinates[0] + ',' + vessel.last_known_position.geometry.coordinates[1]}}" keyTooltip="Vessel longitude and latitude"></il-line>
+        <il-line key="MMSI" [value]="vessel.mmsi" keyTooltip="Vessel Maritime Mobile Service Identity"></il-line>
+        <il-line key="IMO" [value]="vessel.imo" KeyTooltip="Vessel unique International Maritime Organization number."></il-line>
+        <il-line key="Ship type" [value]="vessel.ship_type" KeyTooltip="Vessel type"></il-line>
+        <il-line key="Class" [value]="vessel.class" KeyTooltip="Vessel class"></il-line>
+        <il-line key="Length" [value]="vessel.length" KeyTooltip="Vessel length"></il-line>
+        <il-line key="Width" [value]="vessel.width" KeyTooltip="Vessel width"></il-line>
+        <il-line key="Gross tonnage" [value]="vessel.gross_tonnage" KeyTooltip="Vessel gross_tonnage"></il-line>
+        <il-line key="lifeboats" [value]="vessel.lifeboats" KeyTooltip="Vessel lifeboats"></il-line>
+        <il-line key="Individual classification" [value]="vessel.individual_classification" KeyTooltip="Vessel individual classification"></il-line>
+        <il-line key="General classification" [value]="vessel.general_classification" KeyTooltip="Vessel general classification"></il-line>
+
+        <!-- <il-image [src]="vessel.map_data.image"></il-image> -->
+
+        <div class="vessel-id font-secondary" nbPopover="Vessel id" nbPopoverMode="hint">{{ vessel.id }}</div>
+    </div>
+</div>

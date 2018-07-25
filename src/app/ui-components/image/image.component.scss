@@ -1,0 +1,12 @@
+.il-image {
+    width: 100%;
+    height: 100%;
+    border: solid 2px #222222;
+
+    &.rounded-corners {
+        border-radius: 2%;
+    }
+    &.rounded {
+        border-radius: 50%;
+    }
+}
