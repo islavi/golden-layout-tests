@@ -23,7 +23,8 @@
       "@services/*": ["src/app/services/*"],
       "@models/*": ["src/app/models/*"],
       "@ui/*": ["src/app/ui-components/*"],
-      "@pipes/*": ["src/app/pipes/*"]
+      "@pipes/*": ["src/app/pipes/*"],
+      "@pages/*": ["src/app/pages/*"]
     }
   }
 }

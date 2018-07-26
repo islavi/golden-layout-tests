@@ -1,5 +1,4 @@
 import { GoldenLayoutConfiguration } from '@core/index';
-import { TestPanelComponent } from '@components/test-panel.component';
 import { VesselsMapComponent } from '@components/vessels-map/vessels-map.component';
 import { UsersComponent } from '@components/users/users.component';
 
@@ -10,8 +9,8 @@ export const goldenLayoutConfig: GoldenLayoutConfiguration = {
             componentName: 'vessels-map-page'
         },
         {
-            component: TestPanelComponent,
-            componentName: 'test-panel'
+            component: UsersComponent,
+            componentName: 'more-users-panel'
         },
         {
             component: UsersComponent,
@@ -36,7 +35,7 @@ export const goldenLayoutConfig: GoldenLayoutConfiguration = {
                 }, {
                     type: 'component',
                     title: 'Something else',
-                    componentName: 'test-panel',
+                    componentName: 'more-users-panel',
                     componentState: { label: 'C' }
                 }]
             }]
